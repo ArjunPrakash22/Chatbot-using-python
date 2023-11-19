@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+   .bot {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+    color: #fff;
+    background: #00134d;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+#chatContainer {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.chatMessage {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.userMessage {
+    background-color: #e2f7cb;
+}
+
+.botMessage {
+    background-color: #d3d3d3;
+}
+
+#chatForm {
+    display: flex;
+}
+
+#userInput {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#sendMessageBtn {
+    background-color: #00134d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#sendMessageBtn:hover {
+    background-color: #da1a1a;
+}
+
+    </style>
+</head>
+<body>
+    <div class="bot">
+    <h1 class="heading">Ar-bot</h1>
+    
+    <div id="chatContainer"></div>
+
+    <form onsubmit="sendMessage(); return false;" id="chatForm" action="{{ url_for('ask') }}" method="post">
+        <input type="text" id="userInput" placeholder="Type your message...">
+        <button type="submit" id="sendMessageBtn">Send</button>
+    </form>
+
+    <script>
+        // Your JavaScript code goes here
+        function sendMessage() {
+            var userInput = document.getElementById("userInput").value;
+            if (userInput.trim() === "") {
+                return;
+            }
+
+            // Append user message to the chat container
+            var chatContainer = document.getElementById("chatContainer");
+            chatContainer.innerHTML += "<p>You: " + userInput + "</p>";
+
+            // Clear the input field
+            document.getElementById("userInput").value = "";
+
+            // Send the user message to the server
+            fetch("{{ url_for('ask') }}", {
+                method: "POST",
+                body: new URLSearchParams({ userInput: userInput }),
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Append the bot's response to the chat container
+                chatContainer.innerHTML += "<p>" + data.response + "</p>";
+
+                // Scroll to the bottom of the chat container
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            });
+        }
+    </script>
+    </div>
+</body>
+</html>

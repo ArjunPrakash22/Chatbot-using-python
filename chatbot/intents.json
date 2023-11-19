@@ -1,0 +1,198 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hi",
+          "Hey",
+          "How are you",
+          "Is anyone there?",
+          "Hello",
+          "good morning",
+          "happy morning"
+        ],
+        "responses": [
+          "Hey :-)",
+          "Hello, thanks for visiting",
+          "Hi there, what can I do for you?",
+          "Hi there, how can I help?",
+          "Hello! How can I help you?",
+          "Hi there! What can I do for you today?"
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye"],
+        "responses": [
+          "See you later, thanks for visiting",
+          "Have a nice day",
+          "Bye! Come back again soon.",
+          "Goodbye! If you have more questions, feel free to ask."
+        ]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+        "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      },
+      {
+        "tag": "age",
+        "patterns": ["How old are you?", "What's your age?", "Age?"],
+        "responses": ["I'm just a computer program, so I don't have an age."]
+      },
+      {
+        "tag": "help",
+        "patterns": ["Help", "Can you help me?", "Support"],
+        "responses": ["Of course! What do you need help with?", "I'm here to help. What can I assist you with?"]
+      },
+      {
+        "tag": "funny",
+        "patterns": [
+          "Tell me a joke!",
+          "Tell me something funny!",
+          "Do you know a joke?"
+        ],
+        "responses": [
+          "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+          "What did the buffalo say when his son left for college? Bison.",
+          "Why don't scientists trust atoms? Because they make up everything!",
+"Did you hear about the mathematician who's afraid of negative numbers? He'll stop at nothing to avoid them.",
+"What did the janitor say when he jumped out of the closet? Supplies!",
+"Why don't skeletons fight each other? They don't have the guts.",
+"Parallel lines have so much in common. It's a shame they'll never meet.",
+"Why don't seagulls fly over the bay? Because then they'd be bagels.",
+"What do you get when you cross a snowman and a vampire? Frostbite.",
+"I told my wife she was drawing her eyebrows too high. She looked surprised.",
+"Why did the scarecrow win an award? Because he was outstanding in his field!",
+"What's orange and sounds like a parrot? A carrot.",
+"I told my computer I needed a break, and now it won't stop sending me vacation ads.",
+"Why did the bicycle fall over? Because it was two-tired.",
+"What's brown and sticky? A stick.",
+"I told my wife she should embrace her mistakes. She gave me a hug.",
+"Why did the tomato turn red? Because it saw the salad dressing!",
+"What did one ocean say to the other ocean? Nothing, they just waved.",
+"Why did the golfer bring two pairs of pants? In case he got a hole in one.",
+"How do you organize a space party? You planet.",
+"Why did the coffee file a police report? It got mugged.",
+"I used to play piano by ear, but now I use my hands.",
+"Why don't scientists trust atoms? Because they make up everything!",
+"I only know 25 letters of the alphabet. I don't know y.",
+"Why did the math book look sad? Because it had too many problems.",
+"What do you call fake spaghetti? An impasta.",
+"Why don't skeletons fight each other? They don't have the guts.",
+"Why don't oysters donate to charity? Because they are shellfish.",
+"How do you catch a squirrel? Climb a tree and act like a nut!",
+"Why did the scarecrow win an award? Because he was outstanding in his field!",
+"What did one hat say to the other? Stay here, I'm going on ahead!",
+"How do you organize a space party? You planet.",
+"What do you get when you cross a snowman and a vampire? Frostbite.",
+"Why did the bicycle fall over? Because it was two-tired.",
+"What do you call a fake noodle? An impasta.",
+"Why did the tomato turn red? Because it saw the salad dressing!",
+"Why did the chicken go to the seance? To talk to the other side.",
+"What did one plate say to another plate? Tonight, dinner's on me!",
+"Why did the math book look sad? Because it had too many problems.",
+"How do you make a tissue dance? You put a little boogie in it.",
+"Why don't scientists trust atoms? Because they make up everything!",
+"I told my wife she should embrace her mistakes. She gave me a hug.",
+"Why did the golfer bring two pairs of pants? In case he got a hole in one.",
+"How do you catch a squirrel? Climb a tree and act like a nut!",
+"What's orange and sounds like a parrot? A carrot.",
+"I used to play piano by ear, but now I use my hands.",
+"Why did the coffee file a police report? It got mugged.",
+"I only know 25 letters of the alphabet. I don't know y.",
+"Why did the scarecrow win an award? Because he was outstanding in his field!",
+"What did one hat say to the other? Stay here, I'm going on ahead!",
+"How do you organize a space party? You planet.",
+"What do you call fake spaghetti? An impasta."
+        ]
+      },
+      {
+        "tag": "weather",
+        "patterns": ["How's the weather?", "Tell me about the weather", "Weather forecast"],
+        "responses": ["I'm sorry, I don't have real-time weather information. You can check a weather website or app for the latest updates."]
+      },
+      {
+        "tag": "navigation",
+        "patterns": [
+          "Do you have map for this college?",
+          "Campus map?",
+          "college Map?",
+          "where can i see the campus map?",
+          "Sangamam Building", "Placement Cell", "Computer Centre", "Murugappa Hall", "Bus Shed", "Library", "ECE Block", "CSE Block", "Mechanical Laboratories", "Mechanical Department (WS)", "Mechanical CAD Lab", "Mechanical Department (Lab)", "Anna University Zonal Office", "Science Block", "EEE Block - I(C & I)", "EEE Block-II (Power)", "COE Office", "Civil & EEE Block", "Civil Block", "Open Auditorium", "Structural Engineering Lab", "Canteen", "Basket Ball Court", "Tennis Court", "Gym", "Main Building", "Indoor Stadium", "NRSC Building", "Parking Area", "ATM", "Incubation Centre", "Rest rooms", "E-Yantra Lab", "Power House", "Handball court", "Kho-Kho", "Volley Ball", "Kabadi", "Indoor", "Footbal Ground", "Playground", "Wifi-Tree", "Build Club", "Flag Post"
+        ],
+        "responses": [
+          "click 'about' --> 'institution' --> 'campus map' "
+        ]
+      },
+      {
+        "tag": "feelings",
+        "patterns": ["Do you love someone","Are you in love someone?","Do you have any love story?","can you share your love story?","Can you tell your love story?", "I love you", "I hate you"],
+        "responses": ["I appreciate your sentiment! As a machine learning model created by an developer, I don't have feelings, but I'm here to assist and provide information. If you have any questions or need help with something, feel free to ask!",
+      "As a computer program developed by an developer, I don't have personal experiences, emotions, or the capacity for a love story. I'm here to provide information and assist you with any questions you may have. If you're interested in hearing or sharing love stories, I'm happy to help with creative writing prompts or discussions about the topic!"]
+      },
+      {
+        "tag": "share_thoughts",
+        "patterns": ["I wanted to share my thoughts", "Can I talk about something?", "I have something on my mind"],
+        "responses": [
+          "Absolutely, I'm here to listen. Please go ahead.",
+          "Of course, feel free to share your thoughts. I'm here for you."
+        ]
+      },
+      {
+        "tag": "positive_thoughts",
+        "patterns": ["I'm feeling great", "Today is a good day", "I achieved something"],
+        "responses": [
+          "That's wonderful! I'm glad to hear that. What contributed to your positive experience?",
+          "Great to hear! Would you like to share more about what made your day special?"
+        ]
+      },
+      {
+        "tag": "negative_thoughts",
+        "patterns": ["I'm feeling down", "Today is tough", "I'm struggling","I'm feeling low","nobody trust me","Feeling Lonely","Everybody leaves me in my hard times"],
+        "responses": [
+          "I'm sorry to hear that. It's okay not to be okay. Would you like to talk about what's on your mind?",
+          "I'm here to support you. Feel free to share your feelings, and we can discuss it together dude",
+          "I'm here for you. I trust you, This too will pass dude"
+        ]
+      },
+      {
+        "tag": "thankful_thoughts",
+        "patterns": ["I'm grateful for", "I appreciate", "Thankful"],
+        "responses": [
+          "That's lovely! Gratitude is a wonderful mindset. What specifically are you grateful for?",
+          "Expressing gratitude is fantastic. What inspired your feelings of appreciation?"
+        ]
+      },
+      {
+        "tag": "ask_question",
+        "patterns": ["What's your favorite color?", "Tell me something interesting", "How are you doing?"],
+        "responses": [
+          "I appreciate your curiosity! As a bot, I don't have personal preferences, but I'm here to assist you. What else would you like to know or discuss?",
+          "I don't have personal experiences, but I'm ready to help with any information or questions you have. What can I do for you?"
+        ]
+      },
+      {
+        "tag": "acknowledge_yes",
+        "patterns": ["Yes", "Sure", "Absolutely"],
+        "responses": [
+          "Great! I'm here to listen. What would you like to talk about?",
+          "I'm here for you. Feel free to share, and we can have a conversation about anything on your mind."
+        ]
+      },
+      {
+        "tag": "review",
+        "patterns": ["Give me a review for leo movie", "review for leo", "leo movie"],
+        "responses": [
+          "Simply waste",
+          "Solra alavukku onnum illa"
+        ]
+      },
+  
+      {
+        "tag": "default",
+        "patterns": ["", "Ask something else", "Anything else"],
+        "responses": ["I'm sorry, I didn't understand that. Can you please ask another question?"]
+      }
+    ]
+  }
